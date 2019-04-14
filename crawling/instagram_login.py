@@ -1,4 +1,7 @@
 from selenium import webdriver
+    """
+    Use selenium to automatically login to instagram
+    """
 
 path = '/Users/janeshin/Downloads/chromedriver'
 
