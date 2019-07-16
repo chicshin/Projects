@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13AF4B0E054C62135F000751 /* Pods_NotiTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A84DB2E7CCB41A820B22 /* Pods_NotiTalk.framework */; };
+		7A1E573A22D5A7CF007946BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E573922D5A7CF007946BF /* LoginViewController.swift */; };
+		7A1E573C22D5D1BD007946BF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E573B22D5D1BD007946BF /* RegisterViewController.swift */; };
+		7A5C5AB922D715EF00FFDB16 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C5AB822D715EF00FFDB16 /* PeopleViewController.swift */; };
+		7A5C5ABB22D7228900FFDB16 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C5ABA22D7228900FFDB16 /* UserModel.swift */; };
+		7A60674B22D86E40006AA4FE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A60674A22D86E40006AA4FE /* ChatViewController.swift */; };
+		7A60674E22D86F20006AA4FE /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A60674D22D86F20006AA4FE /* ChatModel.swift */; };
+		7AA36BE422CF598B00BB9C04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA36BE322CF598B00BB9C04 /* AppDelegate.swift */; };
+		7AA36BE622CF598B00BB9C04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA36BE522CF598B00BB9C04 /* ViewController.swift */; };
+		7AA36BE922CF598B00BB9C04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA36BE722CF598B00BB9C04 /* Main.storyboard */; };
+		7AA36BEB22CF598C00BB9C04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AA36BEA22CF598C00BB9C04 /* Assets.xcassets */; };
+		7AA36BEE22CF598C00BB9C04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA36BEC22CF598C00BB9C04 /* LaunchScreen.storyboard */; };
+		7AA36BF622CF5ECB00BB9C04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA36BF522CF5ECB00BB9C04 /* GoogleService-Info.plist */; };
+		7AA36BFA22CF6E9900BB9C04 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA36BF922CF6E9900BB9C04 /* RemoteConfigDefaults.plist */; };
+		7AF1D83B22DB315B00A5B8FF /* ChatRoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1D83A22DB315B00A5B8FF /* ChatRoomsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7A1E573922D5A7CF007946BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7A1E573B22D5D1BD007946BF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7A5C5AB822D715EF00FFDB16 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		7A5C5ABA22D7228900FFDB16 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		7A60674A22D86E40006AA4FE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		7A60674D22D86F20006AA4FE /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		7AA36BE022CF598B00BB9C04 /* NotiTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotiTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AA36BE322CF598B00BB9C04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7AA36BE522CF598B00BB9C04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7AA36BE822CF598B00BB9C04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7AA36BEA22CF598C00BB9C04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7AA36BED22CF598C00BB9C04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7AA36BEF22CF598C00BB9C04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AA36BF522CF5ECB00BB9C04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7AA36BF922CF6E9900BB9C04 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
+		7AF1D83A22DB315B00A5B8FF /* ChatRoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomsViewController.swift; sourceTree = "<group>"; };
+		7AF1D83C22DB4FDC00A5B8FF /* NotiTalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotiTalk.entitlements; sourceTree = "<group>"; };
+		8F5CD8E535916CD7FE4FAFF4 /* Pods-NotiTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotiTalk.release.xcconfig"; path = "Target Support Files/Pods-NotiTalk/Pods-NotiTalk.release.xcconfig"; sourceTree = "<group>"; };
+		A6594ABF931FEBC52A997519 /* Pods-NotiTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotiTalk.debug.xcconfig"; path = "Target Support Files/Pods-NotiTalk/Pods-NotiTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		B324A84DB2E7CCB41A820B22 /* Pods_NotiTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotiTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7AA36BDD22CF598B00BB9C04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13AF4B0E054C62135F000751 /* Pods_NotiTalk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27E5AE22FBBC0BDEE983433A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6594ABF931FEBC52A997519 /* Pods-NotiTalk.debug.xcconfig */,
+				8F5CD8E535916CD7FE4FAFF4 /* Pods-NotiTalk.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		31D1C8070F62FC10CCA411E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B324A84DB2E7CCB41A820B22 /* Pods_NotiTalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A60674C22D86EEA006AA4FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C5ABA22D7228900FFDB16 /* UserModel.swift */,
+				7A60674D22D86F20006AA4FE /* ChatModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7AA36BD722CF598B00BB9C04 = {
+			isa = PBXGroup;
+			children = (
+				7AA36BE222CF598B00BB9C04 /* NotiTalk */,
+				7AA36BE122CF598B00BB9C04 /* Products */,
+				27E5AE22FBBC0BDEE983433A /* Pods */,
+				31D1C8070F62FC10CCA411E8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7AA36BE122CF598B00BB9C04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AA36BE022CF598B00BB9C04 /* NotiTalk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7AA36BE222CF598B00BB9C04 /* NotiTalk */ = {
+			isa = PBXGroup;
+			children = (
+				7AF1D83C22DB4FDC00A5B8FF /* NotiTalk.entitlements */,
+				7AF1D83922DB30F800A5B8FF /* TabBar */,
+				7A60674C22D86EEA006AA4FE /* Model */,
+				7AA36BE322CF598B00BB9C04 /* AppDelegate.swift */,
+				7AA36BE522CF598B00BB9C04 /* ViewController.swift */,
+				7AA36BE722CF598B00BB9C04 /* Main.storyboard */,
+				7AA36BEA22CF598C00BB9C04 /* Assets.xcassets */,
+				7AA36BEC22CF598C00BB9C04 /* LaunchScreen.storyboard */,
+				7AA36BEF22CF598C00BB9C04 /* Info.plist */,
+				7AA36BF522CF5ECB00BB9C04 /* GoogleService-Info.plist */,
+				7AA36BF922CF6E9900BB9C04 /* RemoteConfigDefaults.plist */,
+				7A1E573922D5A7CF007946BF /* LoginViewController.swift */,
+				7A1E573B22D5D1BD007946BF /* RegisterViewController.swift */,
+				7A60674A22D86E40006AA4FE /* ChatViewController.swift */,
+			);
+			path = NotiTalk;
+			sourceTree = "<group>";
+		};
+		7AF1D83922DB30F800A5B8FF /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C5AB822D715EF00FFDB16 /* PeopleViewController.swift */,
+				7AF1D83A22DB315B00A5B8FF /* ChatRoomsViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7AA36BDF22CF598B00BB9C04 /* NotiTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AA36BF222CF598C00BB9C04 /* Build configuration list for PBXNativeTarget "NotiTalk" */;
+			buildPhases = (
+				C08AD8E2DEDE5BDA993FE1C5 /* [CP] Check Pods Manifest.lock */,
+				7AA36BDC22CF598B00BB9C04 /* Sources */,
+				7AA36BDD22CF598B00BB9C04 /* Frameworks */,
+				7AA36BDE22CF598B00BB9C04 /* Resources */,
+				3E3A26A496217365C7246033 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotiTalk;
+			productName = NotiTalk;
+			productReference = 7AA36BE022CF598B00BB9C04 /* NotiTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7AA36BD822CF598B00BB9C04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Jungmin Shin";
+				TargetAttributes = {
+					7AA36BDF22CF598B00BB9C04 = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 7AA36BDB22CF598B00BB9C04 /* Build configuration list for PBXProject "NotiTalk" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7AA36BD722CF598B00BB9C04;
+			productRefGroup = 7AA36BE122CF598B00BB9C04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7AA36BDF22CF598B00BB9C04 /* NotiTalk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7AA36BDE22CF598B00BB9C04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AA36BEE22CF598C00BB9C04 /* LaunchScreen.storyboard in Resources */,
+				7AA36BFA22CF6E9900BB9C04 /* RemoteConfigDefaults.plist in Resources */,
+				7AA36BF622CF5ECB00BB9C04 /* GoogleService-Info.plist in Resources */,
+				7AA36BEB22CF598C00BB9C04 /* Assets.xcassets in Resources */,
+				7AA36BE922CF598B00BB9C04 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E3A26A496217365C7246033 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotiTalk/Pods-NotiTalk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotiTalk/Pods-NotiTalk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotiTalk/Pods-NotiTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C08AD8E2DEDE5BDA993FE1C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NotiTalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7AA36BDC22CF598B00BB9C04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A1E573A22D5A7CF007946BF /* LoginViewController.swift in Sources */,
+				7AF1D83B22DB315B00A5B8FF /* ChatRoomsViewController.swift in Sources */,
+				7AA36BE622CF598B00BB9C04 /* ViewController.swift in Sources */,
+				7AA36BE422CF598B00BB9C04 /* AppDelegate.swift in Sources */,
+				7A60674E22D86F20006AA4FE /* ChatModel.swift in Sources */,
+				7A60674B22D86E40006AA4FE /* ChatViewController.swift in Sources */,
+				7A1E573C22D5D1BD007946BF /* RegisterViewController.swift in Sources */,
+				7A5C5ABB22D7228900FFDB16 /* UserModel.swift in Sources */,
+				7A5C5AB922D715EF00FFDB16 /* PeopleViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7AA36BE722CF598B00BB9C04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AA36BE822CF598B00BB9C04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7AA36BEC22CF598C00BB9C04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AA36BED22CF598C00BB9C04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7AA36BF022CF598C00BB9C04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7AA36BF122CF598C00BB9C04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7AA36BF322CF598C00BB9C04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6594ABF931FEBC52A997519 /* Pods-NotiTalk.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NotiTalk/NotiTalk.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X9VV74H39W;
+				INFOPLIST_FILE = NotiTalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chicshin.NotiTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Jane_NotiTalk;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7AA36BF422CF598C00BB9C04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F5CD8E535916CD7FE4FAFF4 /* Pods-NotiTalk.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NotiTalk/NotiTalk.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X9VV74H39W;
+				INFOPLIST_FILE = NotiTalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chicshin.NotiTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Jane_NotiTalk;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7AA36BDB22CF598B00BB9C04 /* Build configuration list for PBXProject "NotiTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AA36BF022CF598C00BB9C04 /* Debug */,
+				7AA36BF122CF598C00BB9C04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AA36BF222CF598C00BB9C04 /* Build configuration list for PBXNativeTarget "NotiTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AA36BF322CF598C00BB9C04 /* Debug */,
+				7AA36BF422CF598C00BB9C04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7AA36BD822CF598B00BB9C04 /* Project object */;
+}
