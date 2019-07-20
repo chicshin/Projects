@@ -10,8 +10,12 @@
 		13AF4B0E054C62135F000751 /* Pods_NotiTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A84DB2E7CCB41A820B22 /* Pods_NotiTalk.framework */; };
 		7A1E573A22D5A7CF007946BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E573922D5A7CF007946BF /* LoginViewController.swift */; };
 		7A1E573C22D5D1BD007946BF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E573B22D5D1BD007946BF /* RegisterViewController.swift */; };
+		7A414CD522E1A5B3009314E2 /* SelectFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A414CD422E1A5B3009314E2 /* SelectFriendViewController.swift */; };
+		7A414CD722E1DB98009314E2 /* GroupChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A414CD622E1DB98009314E2 /* GroupChatRoomViewController.swift */; };
 		7A5C5AB922D715EF00FFDB16 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C5AB822D715EF00FFDB16 /* PeopleViewController.swift */; };
 		7A5C5ABB22D7228900FFDB16 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C5ABA22D7228900FFDB16 /* UserModel.swift */; };
+		7A5F9D0722E044D9001E8112 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F9D0622E044D9001E8112 /* NotificationModel.swift */; };
+		7A5F9D0922E068EC001E8112 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F9D0822E068EC001E8112 /* AccountViewController.swift */; };
 		7A60674B22D86E40006AA4FE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A60674A22D86E40006AA4FE /* ChatViewController.swift */; };
 		7A60674E22D86F20006AA4FE /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A60674D22D86F20006AA4FE /* ChatModel.swift */; };
 		7AA36BE422CF598B00BB9C04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA36BE322CF598B00BB9C04 /* AppDelegate.swift */; };
@@ -27,8 +31,13 @@
 /* Begin PBXFileReference section */
 		7A1E573922D5A7CF007946BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7A1E573B22D5D1BD007946BF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7A414CD322E1A2A4009314E2 /* BEMCheckBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BEMCheckBox.h; sourceTree = "<group>"; };
+		7A414CD422E1A5B3009314E2 /* SelectFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendViewController.swift; sourceTree = "<group>"; };
+		7A414CD622E1DB98009314E2 /* GroupChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatRoomViewController.swift; sourceTree = "<group>"; };
 		7A5C5AB822D715EF00FFDB16 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		7A5C5ABA22D7228900FFDB16 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		7A5F9D0622E044D9001E8112 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		7A5F9D0822E068EC001E8112 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		7A60674A22D86E40006AA4FE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		7A60674D22D86F20006AA4FE /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		7AA36BE022CF598B00BB9C04 /* NotiTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotiTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +90,7 @@
 			children = (
 				7A5C5ABA22D7228900FFDB16 /* UserModel.swift */,
 				7A60674D22D86F20006AA4FE /* ChatModel.swift */,
+				7A5F9D0622E044D9001E8112 /* NotificationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +130,7 @@
 				7A1E573922D5A7CF007946BF /* LoginViewController.swift */,
 				7A1E573B22D5D1BD007946BF /* RegisterViewController.swift */,
 				7A60674A22D86E40006AA4FE /* ChatViewController.swift */,
+				7A414CD322E1A2A4009314E2 /* BEMCheckBox.h */,
 			);
 			path = NotiTalk;
 			sourceTree = "<group>";
@@ -129,6 +140,9 @@
 			children = (
 				7A5C5AB822D715EF00FFDB16 /* PeopleViewController.swift */,
 				7AF1D83A22DB315B00A5B8FF /* ChatRoomsViewController.swift */,
+				7A5F9D0822E068EC001E8112 /* AccountViewController.swift */,
+				7A414CD422E1A5B3009314E2 /* SelectFriendViewController.swift */,
+				7A414CD622E1DB98009314E2 /* GroupChatRoomViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -259,14 +273,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A1E573A22D5A7CF007946BF /* LoginViewController.swift in Sources */,
+				7A414CD722E1DB98009314E2 /* GroupChatRoomViewController.swift in Sources */,
 				7AF1D83B22DB315B00A5B8FF /* ChatRoomsViewController.swift in Sources */,
 				7AA36BE622CF598B00BB9C04 /* ViewController.swift in Sources */,
 				7AA36BE422CF598B00BB9C04 /* AppDelegate.swift in Sources */,
+				7A414CD522E1A5B3009314E2 /* SelectFriendViewController.swift in Sources */,
 				7A60674E22D86F20006AA4FE /* ChatModel.swift in Sources */,
 				7A60674B22D86E40006AA4FE /* ChatViewController.swift in Sources */,
 				7A1E573C22D5D1BD007946BF /* RegisterViewController.swift in Sources */,
 				7A5C5ABB22D7228900FFDB16 /* UserModel.swift in Sources */,
+				7A5F9D0722E044D9001E8112 /* NotificationModel.swift in Sources */,
 				7A5C5AB922D715EF00FFDB16 /* PeopleViewController.swift in Sources */,
+				7A5F9D0922E068EC001E8112 /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +443,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chicshin.NotiTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Jane_NotiTalk;
+				SWIFT_OBJC_BRIDGING_HEADER = NotiTalk/BEMCheckBox.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -447,6 +466,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chicshin.NotiTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Jane_NotiTalk;
+				SWIFT_OBJC_BRIDGING_HEADER = NotiTalk/BEMCheckBox.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

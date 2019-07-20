@@ -24,9 +24,12 @@ class LoginViewController: UIViewController {
         try! Auth.auth().signOut()
         let statusBar = UIView()
         self.view.addSubview(statusBar)
+        
+        let statusBarRect = UIApplication.shared.statusBarFrame.height
+
         statusBar.snp.makeConstraints { (m) in
             m.right.top.left.equalTo(self.view)
-            m.height.equalTo(40)
+            m.height.equalTo(statusBarRect)
         }
         
         color = remoteconfig["splash_background"].stringValue
@@ -36,17 +39,18 @@ class LoginViewController: UIViewController {
         
         loginButton.addTarget(self, action: #selector(loginEvent ), for: .touchUpInside)
         registerButton.addTarget(self, action: #selector(presentRegister), for: .touchUpInside)
+        
         Auth.auth().addStateDidChangeListener{ (auth, user) in
-            if user != nil {
+            if(user != nil){
                 let view = self.storyboard?.instantiateViewController(withIdentifier: "MainViewTabBarController") as! UITabBarController 
                 self.present(view, animated: true, completion: nil)
                 let uid = Auth.auth().currentUser?.uid
                 
-                InstanceID.instanceID().instanceID { (token, error) in
+                InstanceID.instanceID().instanceID { (result, error) in
                     if let error = error {
                         print("Error fetching remote instance ID: \(error)")
-                    } else if let token = token {
-                        Database.database().reference().child("users").child(uid!).updateChildValues(["pushtoken":token.token])
+                    }else if let result = result{
+                    Database.database().reference().child("users").child(uid!).updateChildValues(["pushtoken":result.token])
                     }
                 }
             }

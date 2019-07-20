@@ -1,4 +1,6 @@
 PODS:
+  - Alamofire (4.8.2)
+  - BEMCheckBox (1.4.1)
   - Firebase/Auth (6.3.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.1.2)
@@ -95,6 +97,7 @@ PODS:
   - GoogleUtilities/UserDefaults (6.2.1):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.2)
+  - Kingfisher (5.7.0)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -107,18 +110,23 @@ PODS:
   - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - BEMCheckBox
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Messaging
   - Firebase/RemoteConfig
   - Firebase/Storage
+  - Kingfisher (~> 5.0)
   - ObjectMapper (~> 3.3)
   - SnapKit (~> 5.0.0)
   - TextFieldEffects
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - BEMCheckBox
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -134,6 +142,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
+    - Kingfisher
     - leveldb-library
     - nanopb
     - ObjectMapper
@@ -142,6 +151,8 @@ SPEC REPOS:
     - TextFieldEffects
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
   FirebaseABTesting: a32c488eb75089a61eb3d86db061dfb909d765db
   FirebaseAnalytics: 470ddab7253b21ad5a40bebd4a9903d7ae19386a
@@ -157,6 +168,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: a35a645835bae31b6bdc0576396bc23908f12a22
   GoogleUtilities: c7a0b08bda3bf808be823ed151f0e28ac6866e71
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
@@ -164,6 +176,6 @@ SPEC CHECKSUMS:
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 4a711410ea36cef88286b10a5c4215f29e8d65da
+PODFILE CHECKSUM: 4826f70bb37e9f62faeb336c0a5d374e2db8e8ce
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.7.4

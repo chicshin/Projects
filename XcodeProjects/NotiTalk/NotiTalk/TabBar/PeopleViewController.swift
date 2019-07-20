@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import Firebase
+import Kingfisher
 
 class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -50,8 +51,23 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 self.tableview.reloadData();
             }
         })
-
+        
+        var selectFriendButton = Button()
+        view.addSubview(selectFriendButton)
+        selectFriendButton.snp.makeConstraints{ (m) in
+            m.bottom.equalTo(view).offset(-90)
+            m.right.equalTo(view).offset(-20)
+            m.width.height.equalTo(50)
+        }
+        selectFriendButton.backgroundColor = UIColor.black
+        selectFriendButton.addTarget(self, action: #selector(showSelectFriendController), for: .touchUpInside)
+        selectFriendButton.layer.cornerRadius = 25
+        selectFriendButton.layer.masksToBounds = true
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func showSelectFriendController(){
+        self.performSegue(withIdentifier: "SelectFriendSegue", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,15 +84,11 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
             m.left.equalTo(cell).offset(25)
             m.height.width.equalTo(40)
         }
+        let url = URL(string: array[indexPath.row].profileImage!)
         
-        URLSession.shared.dataTask(with: URL(string: array[indexPath.row].profileImage!)!) { (data, response, err) in
-            
-            DispatchQueue.main.async{
-                imageview.image = UIImage(data: data!)
-                imageview.layer.cornerRadius = imageview.frame.size.width/2
-                imageview.clipsToBounds = true
-            }
-        }.resume()
+        imageview.layer.cornerRadius = 50/2
+        imageview.clipsToBounds = true
+        imageview.kf.setImage(with: url)
         
         let label = cell.label!
         label.snp.makeConstraints{ (m) in
@@ -84,6 +96,30 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
             m.left.equalTo(imageview.snp.right).offset(20)
         }
         label.text = array[indexPath.row].username
+        
+        let label_comment = cell.label_comment!
+        label_comment.snp.makeConstraints{ (m) in
+            m.centerX.equalTo(cell.uiview_comment_background)
+            m.centerY.equalTo(cell.uiview_comment_background)
+            
+        }
+        
+        if let comment = array[indexPath.row].comment{
+            label_comment.text = comment
+        }
+        
+        cell.uiview_comment_background.snp.makeConstraints{ (m) in
+            m.right.equalTo(cell).offset(-10)
+            m.centerY.equalTo(cell)
+            if let count = label_comment.text?.count{
+                m.width.equalTo(count * 10)
+                
+            }else{
+                m.width.equalTo(0)
+            }
+            m.height.equalTo(30)
+        }
+        cell.uiview_comment_background.backgroundColor = UIColor.gray
         return cell
         
     }
@@ -119,11 +155,15 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var imageview :UIImageView! = UIImageView()
     var label :UILabel! = UILabel()
+    var label_comment :UILabel! = UILabel()
+    var uiview_comment_background :UIView = UIView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.addSubview(imageview)
         self.addSubview(label)
+        self.addSubview(uiview_comment_background)
+        self.addSubview(label_comment)
     }
     
     required init?(coder aDecoder: NSCoder) {

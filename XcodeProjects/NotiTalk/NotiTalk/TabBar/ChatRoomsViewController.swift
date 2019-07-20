@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Kingfisher
 
 class ChatRoomsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -17,6 +18,7 @@ class ChatRoomsViewController: UIViewController, UITableViewDelegate, UITableVie
     var uid :String!
     var chatrooms: [ChatModel]! = []
     var destinationUsers : [String] = []
+    var keys : [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,7 @@ class ChatRoomsViewController: UIViewController, UITableViewDelegate, UITableVie
                 self.chatrooms.removeAll()
                 if let chatroomdic = item.value as? [String:AnyObject]{
                     let chatModel = ChatModel(JSON: chatroomdic)
+                    self.keys.append(item.key)
                     self.chatrooms.append(chatModel!)
                 }
             }
@@ -64,15 +67,16 @@ class ChatRoomsViewController: UIViewController, UITableViewDelegate, UITableVie
             userModel.setValuesForKeys(datasnapshot.value as! [String:AnyObject])
             
             cell.label_title.text = userModel.username
+            
             let url = URL(string:userModel.profileImage!)
-            URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, err) in
-                
-                DispatchQueue.main.async {
-                    cell.imageview.image = UIImage(data:data!)
-                    cell.imageview.layer.cornerRadius = cell.imageview.frame.width/2
-                    cell.imageview.layer.masksToBounds = true
-                }
-            }).resume()
+            cell.imageview.layer.cornerRadius = cell.imageview.frame.width/2
+            cell.imageview.layer.masksToBounds = true
+            cell.imageview.kf.setImage(with: url)
+
+            if(self.chatrooms[indexPath.row].comments.keys.count == 0){
+                return
+            }
+            
             
             let lastMessageKey = self.chatrooms[indexPath.row].comments.keys.sorted(){$0>$1}
             cell.label_lastmessage.text = self.chatrooms[indexPath.row].comments[lastMessageKey[0]]?.message
@@ -88,11 +92,19 @@ class ChatRoomsViewController: UIViewController, UITableViewDelegate, UITableVie
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let destinationUid = self.destinationUsers[indexPath.row]
-        let view = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
-        view.destinationUid = destinationUid
-        
-        self.navigationController?.pushViewController(view, animated: true)
+        if(self.destinationUsers[indexPath.row].count > 2 ){
+            let destinationUid = self.destinationUsers[indexPath.row]
+            let view = self.storyboard?.instantiateViewController(withIdentifier: "GroupChatRoomViewController") as! GroupChatRoomViewController
+            view.destinationRoom = self.keys[indexPath.row]
+            
+            self.navigationController?.pushViewController(view, animated: true)
+        }else{
+            let destinationUid = self.destinationUsers[indexPath.row]
+            let view = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+            view.destinationUid = destinationUid
+            
+            self.navigationController?.pushViewController(view, animated: true)
+        }
     }
     
 
@@ -109,6 +121,11 @@ class ChatRoomsViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidAppear(_ animated: Bool) {
         viewDidLoad()
         
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
 

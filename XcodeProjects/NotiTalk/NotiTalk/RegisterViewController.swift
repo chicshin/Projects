@@ -77,6 +77,11 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
             }
             
             let image = self.imageView.image?.jpegData(compressionQuality: 0.1)
+            
+            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+            changeRequest?.displayName = self.name.text!
+            changeRequest?.commitChanges(completion: nil)
+            
             let storageRef = Storage.storage().reference()
             let storageProfileRef = storageRef.child("userImage").child(userID)
             let metadata = StorageMetadata()

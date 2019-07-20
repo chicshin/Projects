@@ -13,4 +13,5 @@ class UserModel: NSObject {
     @objc var username :String?
     @objc var uid :String?
     @objc var pushtoken :String?
+    @objc var comment :String?
 }
